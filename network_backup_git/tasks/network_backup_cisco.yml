@@ -6,7 +6,7 @@
         backup: yes
       register: config_output
     - name: save variable
-      set_fact: 
+      set_fact:
         bup_temp_file: "{{ config_output.backup_path }}"
   when: ansible_network_os == 'ios'
 
@@ -18,12 +18,12 @@
       register: config_output
 
     - name: save variable
-      set_fact: 
+      set_fact:
         bup_temp_file: "{{ config_output.backup_path }}"
   when: ansible_network_os == 'asa'
 
 - name: nxos block with cleanup
-  block: 
+  block:
     - name: nxos backup
       nxos_config:
         backup: yes
@@ -37,7 +37,7 @@
       delegate_to: localhost
 
     - name: save variable
-      set_fact: 
+      set_fact:
         bup_temp_file: "{{ config_output.backup_path }}"
   when: ansible_network_os == 'nxos'
 
