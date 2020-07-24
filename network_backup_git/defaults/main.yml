@@ -7,8 +7,8 @@ backup_dir: "{{ playbook_dir }}/net_backups"
 backup_file: "{{ backup_dir }}/{{ inventory_hostname }}"
 
 # location of the repo
-backup_repo: git@github.com:gregsowell/net_backups
+backup_repo: repo
 
 # git update details
-git_name: Greg Sowell
-git_email: networkbackups@gregsowell.com
+git_name: none
+git_email: none
