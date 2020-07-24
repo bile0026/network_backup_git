@@ -19,7 +19,7 @@
       dest: "{{ backup_dir }}"
       update: yes
       accept_hostkey: yes
-      key_file: test_gitlab_cliffs
+      key_file: test_gitlab
 
   - name: include cisco task when Cisco device
     include_tasks: "{{ role_path }}/tasks/network_backup_cisco.yml"
